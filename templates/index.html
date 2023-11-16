@@ -1,0 +1,37 @@
+{% comment %}
+  
+
+<form action="{% url 'index'%}" method="POST">
+     {% csrf_token %}
+<input type="text" name="test" >
+<button type="submit">Tesdiq et</button>
+</form>
+{{ melumat }}
+{% endcomment %}
+
+<form action="{% url 'index' %}" method="POST">
+    {% csrf_token %}
+
+    <input {% if ad == 'Vekil' %} checked {% endif %} type="radio" value="Vekil" name="a1">Vekil <br>
+    <input {% if ad == 'Hekim' %} checked {% endif %} type="radio" value="Hekim" name="a1"> Hekim <br>
+    <input {% if ad == 'Polis' %} checked {% endif %} type="radio" value="Polis" name="a1"> Polis <br>
+    <button  type="submit">Tesdiq et</button>
+
+</form>
+
+{{melumat}}
+
+
+{% comment %}
+<form action="" method="post">
+{% csrf_token %}
+<input type="text" name="a">
+
+<button  type="submit">Tesdiq et</button>
+
+{% endcomment %}
+
+
+</form>
+
+{{melumat}}
